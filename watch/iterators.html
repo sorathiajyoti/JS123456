@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Itrators</h2>
+    <script>
+        let numbers = [100, 200, 300, 400, 500];
+        let iter = numbers[Symbol.iterator]();
+
+        let result = iter.next();
+        console.log(iter.next())
+        // iter.next()
+        // console.log(iter.next().value)
+        // console.log(iter.next().value)
+        while(!result.done){
+            console.log(result.value);
+            result = iter.next()
+        }
+    </script>
+</body>
+
+</html>
